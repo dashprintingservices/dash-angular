@@ -14,7 +14,6 @@ export class AppComponent implements OnInit{
   constructor(private http: HttpClient) {};
   ngOnInit(): void {
     this.http.get<User>('http://localhost:8000/auth').subscribe(data=>{
-      
       this.user=data;
     });
   }
